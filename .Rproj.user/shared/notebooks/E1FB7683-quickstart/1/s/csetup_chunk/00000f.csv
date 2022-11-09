@@ -1,0 +1,17 @@
+"0","library(bram)"
+"0","library(brms)"
+"2","Loading required package: Rcpp
+"
+"2","Loading 'brms' package (version 2.17.0). Useful instructions
+can be found by typing help('brms'). A more detailed introduction
+to the package is available through vignette('brms_overview').
+"
+"2","
+Attaching package: ‘brms’
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    ar
+
+"
