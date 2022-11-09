@@ -1,8 +1,8 @@
 ---
-title: "quickstart"
+title: "Quickstart"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{quickstart}
+  %\VignetteIndexEntry{Quickstart}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -61,7 +61,13 @@ To check the model diagnostics (traceplots, summary statistics), run:
 model$diagnostics()
 ```
 
-A summary of the effects implied by the model once it has been fit to the data can be accessed using the `$summary()` function. We are usually interested in the marginal effects, that is, the expected difference in the response of a unit difference in a predictor variable, when all else is held constant. This information is not always contained in the coefficients, so this function provides average marginal effects calculated using the `marginaleffects` package:
+Once the sampler diagnostics have been verified, the predictive capacity of the model can be evaluated using:
+
+```{r}
+model$posterior_check()
+```
+
+If the model has fitted and performs well. The model can then be interpreted. A summary of the effects implied by the model once it has been fitted to the data can be accessed using the `$summary()` function. We are usually interested in the marginal effects, that is, the expected difference in the response of a unit difference in a predictor variable, when all else is held constant. This information is not always contained in the coefficients, so this function provides average marginal effects calculated using the `marginaleffects` package:
 
 ```{r}
 model$summary()

@@ -1,14 +1,19 @@
 Package: bram
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Bram - A Bayesian workflow in brms
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Jordan Hart, Daniel Franks
+Maintainer: JHart96
+Description: A compact Bayesian workflow for brms.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 4.0.0),
+    cmdstanr,
+    brms,
+    bayesplot,
+    marginaleffects
 Suggests: 
     knitr,
     rmarkdown,
