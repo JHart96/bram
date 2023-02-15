@@ -59,7 +59,7 @@ Bram <- R6::R6Class("Bram",
       plot(bayesplot::pp_check(self$brms_prior_model))
 
       # Plot marginals
-      mfx_prior <- marginaleffects::marginaleffects(self$brms_prior_model)
+      mfx_prior <- marginaleffects::marginaleffects(self$brms_prior_model, type="link")
       plot(mfx_prior)
     },
     posterior_check = function () {
@@ -88,7 +88,7 @@ Bram <- R6::R6Class("Bram",
         message("Model must be fit to data with the $fit() function before diagnostics can be checked")
       } else {
         # Compute marginals and plot and print summary
-        mfx <- marginaleffects::marginaleffects(self$brms_model)
+        mfx <- marginaleffects::marginaleffects(self$brms_model, type="link")
         print(summary(mfx))
         plot(mfx)
       }
